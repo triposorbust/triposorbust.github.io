@@ -66,20 +66,16 @@
   <script id="city-shader-fs" type="x-shader/x-fragment">
     precision mediump float;
 
-    /*
     varying vec2 vTextureCoordinates;
     varying vec4 vDebugColor;
     uniform sampler2D uSampler;
-    */
 
-    /*
     void main()
     {
-        gl_FragColor = vec4(0.0125,0.05,0.025,1);
-       // texture2D(uSampler, vTextureCoordinates);
+        gl_FragColor = texture2D(uSampler, vTextureCoordinates);
     }
-    */
 
+    /*
     void main()
     {
       vec4 sum = vec4(0,0,0,0);
@@ -98,6 +94,7 @@
         gl_FragColor = sum*sum*0.0075 + texture2D(uSampler, coord);
       }
     }
+    */
   </script>
 
 
